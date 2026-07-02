@@ -75,7 +75,13 @@ const Carriere360 = () => {
                 </div>
 
                 <div className="card mt-3 fade-up delay-2">
-                    <div className="card-title">📂 Mes Actes Dématérialisés</div>
+                    <div className="flex-between mb-3">
+                        <div className="card-title" style={{ margin: 0 }}>📂 Coffre-Fort Numérique</div>
+                        <span className="badge badge-green" style={{ display: 'flex', alignItems: 'center', gap: '0.2rem' }}>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            Certifié Blockchain
+                        </span>
+                    </div>
                     <div className="table-responsive-wrapper">
                         <table className="table">
                             <thead>

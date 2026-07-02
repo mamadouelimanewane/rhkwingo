@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useAppContext } from '../context/AppContext';
-import { LayoutDashboard, Users, FileSignature, HeartPulse, LogOut, X } from 'lucide-react';
+import { LayoutDashboard, Users, FileSignature, HeartPulse, LogOut, X, PieChart, ShieldAlert, GraduationCap, Briefcase } from 'lucide-react';
 
 const Sidebar = () => {
     const { user, actes, isMobileMenuOpen, setIsMobileMenuOpen } = useAppContext();
@@ -45,6 +45,9 @@ const Sidebar = () => {
                         <NavLink to="/mirador" className="nav-item">
                             <span className="icon">🔮</span> MIRADOR+ Analytics
                         </NavLink>
+                        <NavLink to="/budget-sim" className="nav-item">
+                            <span className="icon"><PieChart size={16}/></span> Budget'Sim
+                        </NavLink>
                         
                         <div className="nav-section">Opérations</div>
                         <NavLink to="/carriere360" className="nav-item">
@@ -56,6 +59,16 @@ const Sidebar = () => {
                         <NavLink to="/bien-etre" className="nav-item">
                             <span className="icon">❤️</span> Bien-Être & Social
                         </NavLink>
+
+                        <div className="nav-section">Développement</div>
+                        <NavLink to="/academy" className="nav-item">
+                            <span className="icon"><GraduationCap size={16}/></span> Academy E-Learning
+                        </NavLink>
+                        
+                        <div className="nav-section" style={{ color: 'var(--blue)' }}>Innovation & IA</div>
+                        <NavLink to="/innovation" className="nav-item">
+                            <span className="icon text-blue"><ShieldAlert size={16}/></span> Détection & Talents
+                        </NavLink>
                     </>
                 ) : (
                     <>
@@ -65,6 +78,14 @@ const Sidebar = () => {
                         </NavLink>
                         <NavLink to="/mes-demandes" className="nav-item">
                             <span className="icon">📝</span> Mes Demandes {myDemandsCount > 0 && <span className="nav-badge">{myDemandsCount}</span>}
+                        </NavLink>
+                        
+                        <div className="nav-section">Mobilité & Évolution</div>
+                        <NavLink to="/bourse-emploi" className="nav-item">
+                            <span className="icon"><Briefcase size={16}/></span> GÉO-POSTES (Bourse)
+                        </NavLink>
+                        <NavLink to="/academy" className="nav-item">
+                            <span className="icon"><GraduationCap size={16}/></span> Academy E-Learning
                         </NavLink>
                     </>
                 )}

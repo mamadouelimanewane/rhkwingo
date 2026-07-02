@@ -7,6 +7,10 @@ import Carriere360 from './pages/Carriere360';
 import Actes from './pages/Actes';
 import Mirador from './pages/Mirador';
 import BienEtre from './pages/BienEtre';
+import BudgetSim from './pages/BudgetSim';
+import Academy from './pages/Academy';
+import Innovation from './pages/Innovation';
+import BourseEmploi from './pages/BourseEmploi';
 
 function App() {
   return (
@@ -19,6 +23,10 @@ function App() {
         <Route path="/actes" element={<Actes />} />
         <Route path="/mirador" element={<Mirador />} />
         <Route path="/bien-etre" element={<BienEtre />} />
+        <Route path="/budget-sim" element={<BudgetSim />} />
+        <Route path="/academy" element={<Academy />} />
+        <Route path="/innovation" element={<Innovation />} />
+        <Route path="/bourse-emploi" element={<BourseEmploi />} />
       </Route>
     </Routes>
   );
