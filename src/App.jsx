@@ -13,6 +13,7 @@ import Innovation from './pages/Innovation';
 import BourseEmploi from './pages/BourseEmploi';
 import Ged from './pages/Ged';
 import Workflows from './pages/Workflows';
+import Juridique from './pages/Juridique';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/bourse-emploi" element={<BourseEmploi />} />
         <Route path="/ged" element={<Ged />} />
         <Route path="/workflows" element={<Workflows />} />
+        <Route path="/juridique" element={<Juridique />} />
       </Route>
     </Routes>
   );
