@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARRIÈRE360 - DRH MEFPT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="sidebar">
+    <div class="sidebar-logo">
+        <div class="flag"><span class="flag-g"></span><span class="flag-y"></span><span class="flag-r"></span></div>
+        <div><div class="brand">DRH NUMÉRIQUE</div><div class="sub">MINISTÈRE DU TRAVAIL SÉNÉGAL</div></div>
+    </div>
+    <div class="sidebar-user">
+        <div class="user-avatar">FA</div>
+        <div class="user-info">
+            <div class="name">Fatou Ba</div>
+            <div class="role">Agent (Matricule: 700010/B)</div>
+        </div>
+    </div>
+    
+    <div class="sidebar-nav">
+        <div class="nav-section">Mon Espace</div>
+        <a href="carriere360.html" class="nav-item">
+            <span class="icon">🧑</span> Mon Dossier 360
+        </a>
+        <a href="carriere360.html" class="nav-item">
+            <span class="icon">📝</span> Mes Demandes <span class="nav-badge">1</span>
+        </a>
+        <div class="nav-section">Services</div>
+        <a href="#" class="nav-item">
+            <span class="icon">🗺</span> Mutation Nationale
+        </a>
+        <a href="#" class="nav-item">
+            <span class="icon">📚</span> Espace Formation
+        </a>
+    </div>
+</nav>
+
+<header class="header">
+    <div class="header-title">CARRIÈRE360 <span>| Portail Agent</span></div>
+    <div class="header-actions">
+        <a href="index.html" class="btn btn-outline btn-sm">Déconnexion</a>
+    </div>
+</header>
+
+<main class="main">
+    <div class="page-header fade-up">
+        <h1>Bonjour, <span>Fatou</span></h1>
+        <p>Gérez votre carrière, vos demandes et vos actes administratifs en toute autonomie.</p>
+    </div>
+    
+    <div class="grid-21 fade-up delay-1">
+        <!-- PROFIL & INFOS -->
+        <div class="card">
+            <div class="flex-between mb-3">
+                <div class="card-title" style="margin:0;">👤 Informations Professionnelles</div>
+                <span class="badge badge-green">Actif</span>
+            </div>
+            
+            <div class="grid-2 mb-3">
+                <div>
+                    <div class="form-group">
+                        <label class="form-label">Corps / Grade</label>
+                        <div class="text-sm font-bold">Inspecteur du Travail (Classe Excep.)</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Lieu d'affectation</label>
+                        <div class="text-sm">Inspection Régionale de Thiès</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-group">
+                        <label class="form-label">Date de prise de service</label>
+                        <div class="text-sm">12 Octobre 2014 (11 ans, 8 mois)</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Prochain avancement prévu</label>
+                        <div class="text-sm text-gold font-bold">Janvier 2027</div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="btn btn-outline btn-sm">Mettre à jour mes informations</button>
+        </div>
+        
+        <!-- DEMANDE EN COURS -->
+        <div class="card">
+            <div class="card-title">📝 Demande en cours</div>
+            <div class="alert alert-gold">
+                <div class="alert-icon">⏳</div>
+                <div class="alert-content">
+                    <div class="alert-title">Demande de Congé Administratif</div>
+                    <div class="alert-sub">Déposée le 28 Juin 2026<br>Étape: Validation N+1 (En cours)</div>
+                </div>
+            </div>
+            <button class="btn btn-primary w-full mt-2">Nouvelle Demande</button>
+        </div>
+    </div>
+    
+    <div class="card mt-3 fade-up delay-2">
+        <div class="card-title">📂 Mes Actes Dématérialisés</div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Type d'acte</th>
+                    <th>Date d'effet</th>
+                    <th>Statut</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Arrêté d'Avancement</td>
+                    <td>01/01/2025</td>
+                    <td><span class="badge badge-green">Signé</span></td>
+                    <td><button class="btn btn-outline btn-sm">Télécharger PDF</button></td>
+                </tr>
+                <tr>
+                    <td>Attestation de Présence</td>
+                    <td>15/06/2026</td>
+                    <td><span class="badge badge-green">Signé</span></td>
+                    <td><button class="btn btn-outline btn-sm">Télécharger PDF</button></td>
+                </tr>
+                <tr>
+                    <td>Décision d'Affectation</td>
+                    <td>12/10/2014</td>
+                    <td><span class="badge badge-gray">Archive</span></td>
+                    <td><button class="btn btn-outline btn-sm">Voir</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

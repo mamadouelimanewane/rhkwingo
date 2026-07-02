@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIRADOR+ Analytics - DRH MEFPT</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .chart-box {
+            height: 250px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            margin-top: 2rem;
+            position: relative;
+        }
+        .bar {
+            width: 15%;
+            background: linear-gradient(0deg, var(--green-dark), var(--green));
+            border-radius: 6px 6px 0 0;
+            position: relative;
+            transition: height 1s;
+        }
+        .bar::after {
+            content: attr(data-val);
+            position: absolute;
+            top: -25px; left: 50%; transform: translateX(-50%);
+            font-size: 0.75rem; font-weight: bold; color: var(--text2);
+        }
+        .bar::before {
+            content: attr(data-lbl);
+            position: absolute;
+            bottom: -25px; left: 50%; transform: translateX(-50%);
+            font-size: 0.75rem; color: var(--text3);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="sidebar">
+    <div class="sidebar-logo">
+        <div class="flag"><span class="flag-g"></span><span class="flag-y"></span><span class="flag-r"></span></div>
+        <div><div class="brand">DRH NUMÉRIQUE</div></div>
+    </div>
+    <div class="sidebar-nav">
+        <a href="dashboard.html" class="nav-item"><span class="icon">←</span> Retour</a>
+        <div class="nav-section">Analytics</div>
+        <a href="mirador.html" class="nav-item active"><span class="icon">📊</span> Pyramides & Effectifs</a>
+        <a href="#" class="nav-item"><span class="icon">🗺</span> GÉO-POSTES</a>
+        <a href="#" class="nav-item"><span class="icon">🔮</span> PRÉDIC'RH</a>
+    </div>
+</nav>
+
+<header class="header">
+    <div class="header-title">MIRADOR+ <span>| Analytics Avancé (Connecté base MIRADOR)</span></div>
+</header>
+
+<main class="main">
+    <div class="page-header fade-up">
+        <h1>Analyse des <span>Effectifs</span></h1>
+    </div>
+    
+    <div class="grid-2 fade-up delay-1">
+        <div class="card">
+            <div class="card-title">Répartition par Tranche d'Âge</div>
+            <div class="chart-box">
+                <div class="bar" style="height:20%;" data-val="12%" data-lbl="20-30"></div>
+                <div class="bar" style="height:45%;" data-val="35%" data-lbl="31-40"></div>
+                <div class="bar" style="height:60%;" data-val="40%" data-lbl="41-50"></div>
+                <div class="bar" style="height:15%;" data-val="13%" data-lbl="51+"></div>
+            </div>
+            <div class="alert alert-gold mt-4">
+                <div class="alert-icon">💡</div>
+                <div class="alert-content">
+                    <div class="alert-title">Alerte PRÉDIC'RH</div>
+                    <div class="alert-sub">13% des effectifs cadres partent à la retraite d'ici 5 ans. Plan de succession requis (COMPÉT'MAP).</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-title">Répartition Homme / Femme</div>
+            <!-- Simple simulated pie info -->
+            <div class="flex-center" style="height:250px; justify-content:center; gap:2rem;">
+                <div style="text-align:center;">
+                    <div style="width:120px;height:120px; border:10px solid var(--green); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.5rem; font-weight:bold;">58%</div>
+                    <div class="mt-2 text-sm text-muted">Hommes</div>
+                </div>
+                <div style="text-align:center;">
+                    <div style="width:120px;height:120px; border:10px solid var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.5rem; font-weight:bold;">42%</div>
+                    <div class="mt-2 text-sm text-muted">Femmes</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

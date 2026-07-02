@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord - DRH MEFPT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+    <div class="sidebar-logo">
+        <div class="flag">
+            <span class="flag-g"></span><span class="flag-y"></span><span class="flag-r"></span>
+        </div>
+        <div>
+            <div class="brand">DRH NUMÉRIQUE</div>
+            <div class="sub">MINISTÈRE DU TRAVAIL SÉNÉGAL</div>
+        </div>
+    </div>
+    
+    <div class="sidebar-user">
+        <div class="user-avatar">AS</div>
+        <div class="user-info">
+            <div class="name">Abdoul Aziz Sylla</div>
+            <div class="role">Directeur des Ressources Humaines</div>
+        </div>
+    </div>
+    
+    <div class="sidebar-nav">
+        <div class="nav-section">Pilotage</div>
+        <a href="dashboard.html" class="nav-item">
+            <span class="icon">📊</span> Tableau de Bord
+        </a>
+        <a href="mirador.html" class="nav-item">
+            <span class="icon">🔮</span> MIRADOR+ Analytics
+        </a>
+        
+        <div class="nav-section">Opérations</div>
+        <a href="carriere360.html" class="nav-item">
+            <span class="icon">🧑</span> CARRIÈRE360
+        </a>
+        <a href="actes.html" class="nav-item">
+            <span class="icon">⚡</span> e-Actes <span class="nav-badge">12</span>
+        </a>
+        <a href="bien-etre.html" class="nav-item">
+            <span class="icon">❤️</span> Bien-Être & Social
+        </a>
+    </div>
+    
+    <div class="sidebar-footer">
+        Propulsé par <strong>KWINGO</strong>
+    </div>
+</nav>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header-title">
+        Tableau de Bord Stratégique <span>| Vue Direction</span>
+    </div>
+    <div class="header-actions">
+        <div class="header-date">Jeudi 2 Juillet 2026</div>
+        <div class="notif-btn">
+            🔔<span class="notif-dot"></span>
+        </div>
+        <a href="index.html" class="btn btn-outline btn-sm">Déconnexion</a>
+    </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+    <div class="page-header fade-up">
+        <h1>Vue d'ensemble des <span>Ressources Humaines</span></h1>
+        <p>Indicateurs clés consolidés sur l'ensemble du MEFPT</p>
+    </div>
+    
+    <!-- KPIs -->
+    <div class="kpi-grid fade-up delay-1">
+        <div class="kpi-card gold">
+            <div class="kpi-icon">👥</div>
+            <div class="kpi-val gold">12,450</div>
+            <div class="kpi-lbl">Agents Actifs (MEFPT)</div>
+            <div class="kpi-trend up">↗ +1.2% ce mois</div>
+        </div>
+        <div class="kpi-card green">
+            <div class="kpi-icon">📄</div>
+            <div class="kpi-val green">3 Jours</div>
+            <div class="kpi-lbl">Délai Moyen Traitement Actes</div>
+            <div class="kpi-trend up">↘ -85% (Avant: 3 semaines)</div>
+        </div>
+        <div class="kpi-card red">
+            <div class="kpi-icon">⚠️</div>
+            <div class="kpi-val red">4.2%</div>
+            <div class="kpi-lbl">Taux d'Absentéisme (Maladie)</div>
+            <div class="kpi-trend down">↗ +0.5% d'alerte</div>
+        </div>
+        <div class="kpi-card blue">
+            <div class="kpi-icon">🎓</div>
+            <div class="kpi-val blue">85%</div>
+            <div class="kpi-lbl">Réalisation Plan Formation</div>
+            <div class="kpi-trend up">↗ Objectif > 90%</div>
+        </div>
+    </div>
+    
+    <div class="grid-12 fade-up delay-2">
+        <!-- ALERTES -->
+        <div class="card">
+            <div class="card-title">🚨 Alertes & Actions Requises</div>
+            
+            <div class="alert alert-red">
+                <div class="alert-icon">⚠️</div>
+                <div class="alert-content">
+                    <div class="alert-title">Dépassement Quota Mutations</div>
+                    <div class="alert-sub">Région de Dakar: +120 demandes en instance.</div>
+                </div>
+            </div>
+            
+            <div class="alert alert-gold">
+                <div class="alert-icon">⏳</div>
+                <div class="alert-content">
+                    <div class="alert-title">12 Actes en souffrance</div>
+                    <div class="alert-sub">Attente de signature DGCAA depuis > 5 jours.</div>
+                </div>
+            </div>
+            
+            <div class="alert alert-green">
+                <div class="alert-icon">✅</div>
+                <div class="alert-content">
+                    <div class="alert-title">Audit Physique 2026 Terminé</div>
+                    <div class="alert-sub">Rapport final généré. 45 anomalies détectées.</div>
+                </div>
+            </div>
+            
+            <button class="btn btn-outline w-full mt-2">Voir toutes les alertes</button>
+        </div>
+        
+        <!-- FLUX D'ACTIVITÉ -->
+        <div class="card">
+            <div class="card-title">📈 Flux d'activité des divisions</div>
+            <div class="grid-2">
+                <!-- Division 1 -->
+                <div>
+                    <h3 class="text-sm font-bold mb-2">DGCAA (Carrières)</h3>
+                    <div class="stat-row">
+                        <span class="label">Actes générés ce mois</span>
+                        <span class="value text-green">1,245</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="label">Avancements traités</span>
+                        <span class="value">890</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="label">Retraites anticipées</span>
+                        <span class="value">45</span>
+                    </div>
+                </div>
+                <!-- Division 2 -->
+                <div>
+                    <h3 class="text-sm font-bold mb-2">DFC (Formation)</h3>
+                    <div class="stat-row">
+                        <span class="label">Agents formés (T2)</span>
+                        <span class="value text-blue">3,200</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="label">Budget consommé</span>
+                        <span class="value">450M FCFA</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="label">Sessions en cours</span>
+                        <span class="value">12</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
