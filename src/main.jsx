@@ -6,6 +6,7 @@ import { AppProvider } from './context/AppContext.jsx'
 import './index.css'
 import './enhanced.css'
 import './responsive.css'
+import './ged.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

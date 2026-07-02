@@ -11,6 +11,8 @@ import BudgetSim from './pages/BudgetSim';
 import Academy from './pages/Academy';
 import Innovation from './pages/Innovation';
 import BourseEmploi from './pages/BourseEmploi';
+import Ged from './pages/Ged';
+import Workflows from './pages/Workflows';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
         <Route path="/academy" element={<Academy />} />
         <Route path="/innovation" element={<Innovation />} />
         <Route path="/bourse-emploi" element={<BourseEmploi />} />
+        <Route path="/ged" element={<Ged />} />
+        <Route path="/workflows" element={<Workflows />} />
       </Route>
     </Routes>
   );

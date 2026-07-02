@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useAppContext } from '../context/AppContext';
-import { LayoutDashboard, Users, FileSignature, HeartPulse, LogOut, X, PieChart, ShieldAlert, GraduationCap, Briefcase } from 'lucide-react';
+import { LayoutDashboard, Users, FileSignature, HeartPulse, LogOut, X, PieChart, ShieldAlert, GraduationCap, Briefcase, Folder, GitMerge } from 'lucide-react';
 
 const Sidebar = () => {
     const { user, actes, isMobileMenuOpen, setIsMobileMenuOpen } = useAppContext();
@@ -53,11 +53,15 @@ const Sidebar = () => {
                         <NavLink to="/carriere360" className="nav-item">
                             <span className="icon">🧑</span> CARRIÈRE360
                         </NavLink>
+                        <div className="nav-section">Dématérialisation</div>
                         <NavLink to="/actes" className="nav-item">
                             <span className="icon">⚡</span> e-Actes {pendingActsCount > 0 && <span className="nav-badge">{pendingActsCount}</span>}
                         </NavLink>
-                        <NavLink to="/bien-etre" className="nav-item">
-                            <span className="icon">❤️</span> Bien-Être & Social
+                        <NavLink to="/workflows" className="nav-item">
+                            <span className="icon"><GitMerge size={16}/></span> Moteur Workflows
+                        </NavLink>
+                        <NavLink to="/ged" className="nav-item">
+                            <span className="icon"><Folder size={16}/></span> E-Docs (GED)
                         </NavLink>
 
                         <div className="nav-section">Développement</div>
