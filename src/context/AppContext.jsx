@@ -5,6 +5,9 @@ const AppContext = createContext();
 export const useAppContext = () => useContext(AppContext);
 
 export const AppProvider = ({ children }) => {
+    // Mobile Menu State
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
     // Session state
     const [user, setUser] = useState(() => {
         const saved = localStorage.getItem('rh_user');
@@ -76,7 +79,8 @@ export const AppProvider = ({ children }) => {
         <AppContext.Provider value={{
             user, login, logout,
             actes, addDemande, validerActe,
-            notifications, setNotifications
+            notifications, setNotifications,
+            isMobileMenuOpen, setIsMobileMenuOpen
         }}>
             {children}
         </AppContext.Provider>

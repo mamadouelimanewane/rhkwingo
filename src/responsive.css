@@ -1,0 +1,86 @@
+/* responsive.css - Adaptations pour mobile et tablette */
+
+/* Cacher le bouton menu sur desktop, l'afficher sur mobile */
+.mobile-menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-close-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--text3);
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    z-index: 95;
+}
+
+/* ── TABLET (max 1024px) ─────────────────────────────────────────── */
+@media(max-width:1024px) {
+    .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    .grid-2, .grid-12, .grid-21, .grid-11 { grid-template-columns: 1fr; }
+    
+    .split-landing { flex-direction: column; }
+    .split-left { padding: 3rem 2rem; min-height: 50vh; }
+    .split-right { width: 100%; padding: 2rem; }
+    .quick-action-bar { flex-wrap: wrap; }
+    .btn-quick { flex: 1 1 calc(50% - 1rem); }
+}
+
+/* ── MOBILE (max 768px) ──────────────────────────────────────────── */
+@media(max-width:768px) {
+    /* Header & Main Content Adjustments */
+    .header { left: 0; padding: 0 1rem; }
+    .main { margin-left: 0; padding: 1.5rem 1rem; }
+    
+    /* Mobile Menu Button */
+    .mobile-menu-btn { display: flex; }
+    .mobile-close-btn { display: block; }
+    
+    /* Sidebar Drawer */
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    .mobile-overlay {
+        display: block;
+    }
+    
+    /* Typography & Layout */
+    .page-header h1 { font-size: 1.3rem; }
+    .card { padding: 1rem; }
+    .kpi-grid { grid-template-columns: 1fr; }
+    .btn-quick { flex: 1 1 100%; }
+    
+    /* Tables Horizontal Scroll */
+    .table { width: 100%; min-width: 600px; }
+    .table-responsive-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Split Landing Mobile Adjustments */
+    .landing-brand { font-size: 2.5rem; }
+    .landing-desc { font-size: 1rem; margin-bottom: 2rem; }
+    .landing-features { grid-template-columns: 1fr; }
+    .glass-panel { padding: 1.5rem; border-radius: 16px; }
+    .header-date { display: none; } /* Hide date on small screens */
+}

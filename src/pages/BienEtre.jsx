@@ -30,14 +30,16 @@ const BienEtre = () => {
                     
                     <div className="card">
                         <div className="card-title">🚨 Demandes Cellule d'Écoute (Anonymes)</div>
-                        <table className="table">
-                            <thead><tr><th>Région</th><th>Demandes (Mois)</th><th>Tendance</th></tr></thead>
+                        <div className="table-responsive-wrapper">
+                            <table className="table">
+                                <thead><tr><th>Région</th><th>Demandes (Mois)</th><th>Tendance</th></tr></thead>
                             <tbody>
                                 <tr><td>Dakar</td><td className="font-bold">45</td><td className="text-red">↗ +12%</td></tr>
                                 <tr><td>Thiès</td><td className="font-bold">12</td><td className="text-green">↘ -5%</td></tr>
                                 <tr><td>Ziguinchor</td><td className="font-bold">28</td><td className="text-red">↗ +8%</td></tr>
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
                         <div className="alert alert-red mt-3">
                             <div className="alert-icon">⚠️</div>
                             <div className="alert-content">

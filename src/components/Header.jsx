@@ -1,9 +1,10 @@
 import React from 'react';
 import { useAppContext } from '../context/AppContext';
 import { useNavigate } from 'react-router-dom';
+import { Menu } from 'lucide-react';
 
 const Header = ({ title, subtitle }) => {
-    const { notifications, setNotifications, logout } = useAppContext();
+    const { notifications, setNotifications, logout, isMobileMenuOpen, setIsMobileMenuOpen } = useAppContext();
     const navigate = useNavigate();
 
     const handleLogout = () => {
@@ -22,8 +23,16 @@ const Header = ({ title, subtitle }) => {
 
     return (
         <header className="header">
-            <div className="header-title">
-                {title} {subtitle && <span>| {subtitle}</span>}
+            <div className="flex-center gap-1">
+                <button 
+                    className="mobile-menu-btn" 
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                >
+                    <Menu size={24} />
+                </button>
+                <div className="header-title">
+                    {title} {subtitle && <span>| {subtitle}</span>}
+                </div>
             </div>
             <div className="header-actions">
                 <div className="header-date" style={{textTransform: 'capitalize'}}>{today}</div>

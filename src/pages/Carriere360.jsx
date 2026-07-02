@@ -76,8 +76,9 @@ const Carriere360 = () => {
 
                 <div className="card mt-3 fade-up delay-2">
                     <div className="card-title">📂 Mes Actes Dématérialisés</div>
-                    <table className="table">
-                        <thead>
+                    <div className="table-responsive-wrapper">
+                        <table className="table">
+                            <thead>
                             <tr>
                                 <th>Type d'acte</th>
                                 <th>Date d'effet</th>
@@ -100,6 +101,7 @@ const Carriere360 = () => {
                             ))}
                         </tbody>
                     </table>
+                    </div>
                 </div>
             </main>
 

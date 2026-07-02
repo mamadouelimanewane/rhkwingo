@@ -31,8 +31,9 @@ const Actes = () => {
                         </div>
                     </div>
                     
-                    <table className="table">
-                        <thead>
+                    <div className="table-responsive-wrapper">
+                        <table className="table">
+                            <thead>
                             <tr>
                                 <th>Matricule</th>
                                 <th>Nom Agent</th>
@@ -65,7 +66,8 @@ const Actes = () => {
                                 </tr>
                             ))}
                         </tbody>
-                    </table>
+                        </table>
+                    </div>
                 </div>
             </main>
         </>

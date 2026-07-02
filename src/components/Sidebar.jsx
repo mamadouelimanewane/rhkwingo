@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useAppContext } from '../context/AppContext';
-import { LayoutDashboard, Users, FileSignature, HeartPulse, LogOut } from 'lucide-react';
+import { LayoutDashboard, Users, FileSignature, HeartPulse, LogOut, X } from 'lucide-react';
 
 const Sidebar = () => {
-    const { user, actes } = useAppContext();
+    const { user, actes, isMobileMenuOpen, setIsMobileMenuOpen } = useAppContext();
 
     if (!user) return null;
 
@@ -12,11 +12,18 @@ const Sidebar = () => {
     const pendingActsCount = actes.filter(a => a.status === 'attente').length;
 
     return (
-        <nav className="sidebar">
-            <div className="sidebar-logo">
-                <div className="flag"><span className="flag-g"></span><span className="flag-y"></span><span className="flag-r"></span></div>
-                <div><div className="brand">DRH NUMÉRIQUE</div><div className="sub">MINISTÈRE DU TRAVAIL SÉNÉGAL</div></div>
-            </div>
+        <>
+            {isMobileMenuOpen && (
+                <div className="mobile-overlay" onClick={() => setIsMobileMenuOpen(false)}></div>
+            )}
+            <nav className={`sidebar ${isMobileMenuOpen ? 'open' : ''}`}>
+                <div className="sidebar-logo">
+                    <div className="flag"><span className="flag-g"></span><span className="flag-y"></span><span className="flag-r"></span></div>
+                    <div><div className="brand">DRH NUMÉRIQUE</div><div className="sub">MINISTÈRE DU TRAVAIL SÉNÉGAL</div></div>
+                    <button className="mobile-close-btn" onClick={() => setIsMobileMenuOpen(false)}>
+                        <X size={20} />
+                    </button>
+                </div>
             
             <div className="sidebar-user">
                 <div className="user-avatar" style={{ background: user.role === 'agent' ? 'var(--green)' : 'var(--gold-dark)' }}>
@@ -28,7 +35,7 @@ const Sidebar = () => {
                 </div>
             </div>
             
-            <div className="sidebar-nav">
+            <div className="sidebar-nav" onClick={() => setIsMobileMenuOpen(false)}>
                 {user.role === 'directeur' ? (
                     <>
                         <div className="nav-section">Pilotage</div>
@@ -63,10 +70,12 @@ const Sidebar = () => {
                 )}
             </div>
             
+            
             <div className="sidebar-footer">
                 Propulsé par <strong>KWINGO</strong>
             </div>
         </nav>
+        </>
     );
 };
 
